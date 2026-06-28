@@ -245,9 +245,7 @@ download_to_file() {
             fi
         else
             if [ -n "\$http_proxy_address" ]; then
-                http_proxy="http://\$http_proxy_address" \\
-                https_proxy="http://\$http_proxy_address" \\
-                wget -O "\$filepath" "\$url"
+                http_proxy="http://\$http_proxy_address" https_proxy="http://\$http_proxy_address" wget -O "\$filepath" "\$url"
             else
                 wget -O "\$filepath" "\$url"
             fi
